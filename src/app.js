@@ -1,22 +1,15 @@
-import React, { Component } from 'react';
-import { Container } from 'reactstrap';
+import React, { Component } from 'react'
+import { Container } from 'reactstrap'
 
-require ('./styles.scss');
-
+require('./styles.scss')
 
 export default class App extends Component {
-  constructor(props) {
-    super(props);
-  }
-
-  render() {
+  render () {
     return (
       <Container fluid>
         {this.props.children}
       </Container>
-    );
+    )
   }
 }
-
-
 

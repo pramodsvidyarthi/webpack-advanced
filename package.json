@@ -5,8 +5,11 @@
   "main": "index.js",
   "scripts": {
     "start": "hjs-dev-server",
-    "prebuild": "rm -rf public && mkdir public",
-    "build": "set NODE_ENV=production&& webpack"
+    "prebuild": "RMDIR /S /Q public & mkdir public",
+    "build": "set NODE_ENV=production&& webpack",
+    "prelint": "standard --fix",
+    "lint": "standard",
+    "validate": "npm ls"
   },
   "keywords": [],
   "author": "",
@@ -22,16 +25,25 @@
     "hjs-webpack": "^8.4.3",
     "node-sass": "^4.1.1",
     "postcss-loader": "^1.2.1",
+    "precommit-hook": "^3.0.0",
     "sass-loader": "^4.1.1",
-    "style-loader": "^0.13.1"
+    "standard": "^8.6.0",
+    "style-loader": "^0.13.1",
+    "tape": "^4.6.3"
   },
   "dependencies": {
-    "bootstrap-sass": "^3.3.7",
     "react": "^15.4.1",
     "react-addons-css-transition-group": "^15.4.1",
     "react-addons-transition-group": "^15.4.1",
     "react-dom": "^15.4.1",
     "react-router": "^3.0.0",
     "reactstrap": "^3.9.5"
-  }
+  },
+  "standard": {
+    "parser": "babel-eslint"
+  },
+  "pre-commit": [
+    "lint",
+    "test"
+  ]
 }

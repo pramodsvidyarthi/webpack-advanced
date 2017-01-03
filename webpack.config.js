@@ -1,5 +1,5 @@
-var webpack = require('webpack');
-var getConfig = require('hjs-webpack');
+var webpack = require('webpack')
+var getConfig = require('hjs-webpack')
 
 var config = getConfig({
   in: './src/index.js',
@@ -8,16 +8,16 @@ var config = getConfig({
   html: false,
   clearBeforeBuild: true,
   devServer: {
-   contentBase: __dirname
+    contentBase: __dirname
   }
   // https: true
-});
+})
 
-config.plugins.push(new webpack.optimize.CommonsChunkPlugin('vendors', 'vendors.js'));
+config.plugins.push(new webpack.optimize.CommonsChunkPlugin('vendors', 'vendors.js'))
 
 config.entry = {
   vendors: ['react', 'react-router'],
   main: config.entry
 }
 
-module.exports = config;
+module.exports = config
