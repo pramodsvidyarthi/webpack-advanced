@@ -5,4 +5,4 @@
 ##code splitting using webpack
 
 -  breaking the code into smaller chunks and **dynamically** loading the chunks on demand
--  extracting ***common***libraries into a separate chunk called vendors so that it can be cached
+-  extracting ***common*** libraries into a separate chunk called vendors so that it can be cached
