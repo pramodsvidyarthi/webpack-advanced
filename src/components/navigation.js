@@ -5,7 +5,7 @@ import { Link } from 'react-router'
 export default () => {
   return (
     <div className='clearfix'>
-     <Row>
+      <Row>
         <Col lg='6' md='6'><Link to=''>Home</Link></Col>
         <Col lg='6' md='6'><Link to='/about'>About</Link></Col>
       </Row>

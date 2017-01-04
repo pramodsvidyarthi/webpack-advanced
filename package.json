@@ -47,6 +47,7 @@
     "parser": "babel-eslint"
   },
   "pre-commit": [
+    "prelint",
     "lint",
     "test"
   ]
