@@ -1,8 +1,7 @@
 import test from 'tape'
 import React from 'react'
-import { shallow } from 'enzyme'
+import { shallow, render } from 'enzyme'
 import { Row, Col } from 'reactstrap'
-import { Link } from 'react-router'
 
 import Navigation from './navigation'
 
@@ -16,11 +15,11 @@ test('Layout has two rows and four columns', t => {
 
 test('There are four links and the link names are correct', t => {
   t.plan(5)
-  const wrapper = shallow(<Navigation />)
-  t.equals(wrapper.find(Link).length, 4, 'There are four links')
-  t.equals(shallow(wrapper.find(Link).nodes[0]).props().children, 'Home', 'First link is Home')
-  t.equals(shallow(wrapper.find(Link).nodes[1]).props().children, 'About', 'Second link is About')
-  t.equals(shallow(wrapper.find(Link).nodes[2]).props().children, 'Contact', 'Third link is Contact')
-  t.equals(shallow(wrapper.find(Link).nodes[3]).props().children, 'Portfolio', 'Last link is Portfolio')
+  const wrapper = render(<Navigation />)
+  t.equals(wrapper.find('a').length, 4, 'There are four links')
+  t.equals(wrapper.find('a').eq(0).text(), 'Home', 'First link is Home')
+  t.equals(wrapper.find('a').eq(1).text(), 'About', 'Second link is About')
+  t.equals(wrapper.find('a').eq(2).text(), 'Contact', 'Third link is Contact')
+  t.equals(wrapper.find('a').eq(3).text(), 'Portfolio', 'Fourth link is Portfolio')
   t.end()
 })
