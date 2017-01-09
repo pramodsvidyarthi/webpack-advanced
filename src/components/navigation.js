@@ -1,6 +1,6 @@
-import React from 'react'
-import { Row, Col } from 'reactstrap'
-import { Link } from 'react-router'
+import React from 'react';
+import { Row, Col } from 'reactstrap';
+import { Link } from 'react-router';
 
 export default () => {
   return (
@@ -14,5 +14,5 @@ export default () => {
         <Col lg='6' md='6'><Link to='/portfolio'>Portfolio</Link></Col>
       </Row>
     </div>
-  )
-}
+  );
+};

@@ -1,7 +1,7 @@
-import React, { Component } from 'react'
-import { Container } from 'reactstrap'
+import React, { Component } from 'react';
+import { Container } from 'reactstrap';
 
-require('./styles.scss')
+require('./styles.scss');
 
 export default class App extends Component {
   render () {
@@ -9,7 +9,7 @@ export default class App extends Component {
       <Container fluid>
         {this.props.children}
       </Container>
-    )
+    );
   }
 }
 
