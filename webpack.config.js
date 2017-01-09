@@ -13,6 +13,8 @@ var config = getConfig({
   // https: true
 });
 
+config.module.preLoaders = [];
+config.module.preLoaders.push({test: /\.js$/, loader: 'eslint-loader', exclude: /node_modules/});
 config.plugins.push(new webpack.optimize.CommonsChunkPlugin('vendors', 'vendors.js'));
 
 config.entry = {

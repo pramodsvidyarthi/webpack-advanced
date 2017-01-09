@@ -9,7 +9,7 @@
     "build": "set NODE_ENV=production&& webpack",
     "prelint": "semistandard --fix",
     "lint": "semistandard",
-    "test": "node_modules/.bin/tape -r babel-register ./src/**/*.test.js",
+    "test": "node_modules/.bin/tape-watch -r babel-register -1 ./src/**/*.test.js",
     "validate": "npm ls"
   },
   "keywords": [],
@@ -25,6 +25,12 @@
     "babel-register": "^6.18.0",
     "css-loader": "^0.26.1",
     "enzyme": "^2.7.0",
+    "eslint-config-standard": "^6.2.1",
+    "eslint-config-standard-jsx": "^3.2.0",
+    "eslint-loader": "^1.6.1",
+    "eslint-plugin-promise": "^3.4.0",
+    "eslint-plugin-react": "^6.9.0",
+    "eslint-plugin-standard": "^2.0.1",
     "hjs-webpack": "^8.4.3",
     "node-sass": "^4.1.1",
     "postcss-loader": "^1.2.1",
@@ -33,7 +39,8 @@
     "sass-loader": "^4.1.1",
     "semistandard": "^9.2.1",
     "style-loader": "^0.13.1",
-    "tape": "^4.6.3"
+    "tape": "^4.6.3",
+    "tape-watch": "^2.2.4"
   },
   "dependencies": {
     "react": "^15.4.1",
