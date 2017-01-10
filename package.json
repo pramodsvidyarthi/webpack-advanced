@@ -10,6 +10,7 @@
     "prelint": "semistandard --fix",
     "lint": "semistandard",
     "test": "node_modules/.bin/tape-watch -r babel-register -1 ./src/**/*.test.js",
+    "coverage": "node_modules/.bin/nyc --require babel-register node_modules/.bin/tape -r babel-register ./src/**/*.test.js",
     "validate": "npm ls"
   },
   "keywords": [],
@@ -33,6 +34,7 @@
     "eslint-plugin-standard": "^2.0.1",
     "hjs-webpack": "^8.4.3",
     "node-sass": "^4.1.1",
+    "nyc": "^10.0.0",
     "postcss-loader": "^1.2.1",
     "precommit-hook": "^3.0.0",
     "react-addons-test-utils": "^15.4.1",
