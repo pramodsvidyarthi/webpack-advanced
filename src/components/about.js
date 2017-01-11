@@ -1,6 +1,10 @@
 import React from 'react';
 
 class About extends React.Component {
+  componentDidMount () {
+    console.log('Hello there...this line is not touched');
+  }
+
   render () {
     return (
       <div>

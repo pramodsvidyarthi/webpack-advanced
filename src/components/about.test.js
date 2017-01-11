@@ -10,3 +10,4 @@ test('it displays the appropriate hello message', t => {
   t.equals(wrapper.childAt(0).text(), 'Welcome to About Page', 'The component has matching text');
   t.end();
 });
+
